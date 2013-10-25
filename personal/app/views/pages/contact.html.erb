@@ -1,0 +1,22 @@
+<h1>Contact Me!</h1>
+
+<p>Feel free to contact me about anything!</p>
+
+<table>
+    <tr>
+        <td class="label">Your Name</td>
+        <td><%= text_field_tag "name" %></td>
+    </tr>
+    <tr>
+        <td class="label">Your E-mail</td>
+        <td><%= text_field_tag "email" %></td>
+    </tr>
+    <tr valign="top">
+        <td class="label">Your Message</td>
+        <td><%= text_area_tag "message" %></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><%= submit_tag(" SEND ") %></td>
+    </tr>    
+</table>
