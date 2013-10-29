@@ -33,9 +33,7 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'guard-rspec', require: false
   gem "rspec-rails", "~> 2.8"
-  gem 'guard'
 end
 
 # Use ActiveModel has_secure_password
