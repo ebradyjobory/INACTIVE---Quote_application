@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quotesaver</title>
+  <title>Quote Saver</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<!-- page bar -->
+	<div class="title-bar">
+		<ul>
+			<li>
+			<a class="brand" href="#">Quote Saver</a>
+			</li>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#about">About</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+		</ul>
+	</div>
+	</div>
+	</div>
+</div>
 
-<%= yield %>
+
+<div class="body-container">
+
+	<%= yield %>
+
+</div>
 
 </body>
 </html>
