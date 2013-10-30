@@ -1,26 +1,31 @@
 html, body {
-    margin:0;
-    padding:0;
-    height:100%; 
+     padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
  } 
-}
-.body-container {
-	  float: right;
 
-	
+.body-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 
 .title-bar {
-	  margin-right: none;
-	  margin-left: none;
+	  
 	  background-color: black;
-      border-radius:2px;
+    height: 50px;
+    border-radius: 5px;
+
    
 }
 
 .brand {
-	font-family: 'Fredericka the Great', cursive;
-	font-size: 200%;
+  font-family: 'Cherry Swash', cursive;
+	font-size: 150%;
+
 }
 
 
@@ -46,4 +51,10 @@ ul li {
 	color: #FFFFFF;
 	display: inline;
 	
+}
+.line-header {
+  padding-bottom: 1px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
 }

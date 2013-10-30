@@ -1,4 +1,6 @@
+<div class="line-header">
 <h1>Listing quotes</h1>
+</div>
 
 <table>
   <thead>
@@ -6,10 +8,7 @@
       <th>Name</th>
       <th>Source</th>
       <th>Title</th>
-      <th>Body</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Quote</th>
     </tr>
   </thead>
 
@@ -20,9 +19,11 @@
         <td><%= quote.source %></td>
         <td><%= quote.title %></td>
         <td><%= quote.body %></td>
+        <div class="navigation-link">
         <td><%= link_to 'Show', quote %></td>
         <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure you want to delete the quote?' } %></td>
+      </div>
       </tr>
     <% end %>
   </tbody>

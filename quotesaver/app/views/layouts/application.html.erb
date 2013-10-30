@@ -5,14 +5,14 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <!-- page bar -->
 	<div class="title-bar">
 		<ul>
 			<li>
-			<a class="brand" href="#">Quote Saver</a>
+			<a class="brand" href="/quotes">Quote Saver</a>
 			</li>
 			<li>
 				<a href="#">Home</a>
@@ -25,16 +25,13 @@
 			</li>
 		</ul>
 	</div>
-	</div>
-	</div>
-</div>
 
-
-<div class="body-container">
-
+	<div class="body-container">
+	
 	<%= yield %>
 
-</div>
+	</div>
+
 
 </body>
 </html>
