@@ -1,8 +1,7 @@
-<div class="line-header">
-<h1>Listing quotes</h1>
-</div>
 
-<table>
+<h1>Listing quotes</h1>
+
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -10,25 +9,25 @@
       <th>Title</th>
       <th>Quote</th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+<!-- 
+  <tbody> -->
+    <div class="button">
+    <%= link_to 'Post new quote!', new_quote_path %></br>
+    </div>
+
     <% @quotes.each do |quote| %>
-      <tr>
-        <td><%= quote.name %></td>
-        <td><%= quote.source %></td>
-        <td><%= quote.title %></td>
-        <td><%= quote.body %></td>
-        <div class="navigation-link">
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure you want to delete the quote?' } %></td>
-      </div>
-      </tr>
+      <div class="content">
+      Name: <strong><%= quote.name %></strong></br>
+      <p>Source: <%= quote.source%></p>
+      <p>Title: <%= quote.title%></p>
+      <p>Quote: <%= quote.body%></p>
+<!--    <%= link_to time_ago_in_words(quote.created_at) + " ago", quote %> |
+ -->    <%= link_to 'Edit', edit_quote_path(quote) %> |
+        <%= link_to 'Delete', quote, method: :delete, data: { confirm: 'Are you sure you want to delete the quote?' } %>
+    </div> 
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Quote', new_quote_path %>
+   
+ 

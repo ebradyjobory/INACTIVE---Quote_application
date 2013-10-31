@@ -11,11 +11,11 @@
 <!-- page bar -->
 	<div class="title-bar">
 		<ul>
-			<li>
-			<a class="brand" href="/quotes">Quote Saver</a>
+			<li class="brand">
+			<%= link_to 'Quoter', quotes_path %>
 			</li>
 			<li>
-				<a href="#">Home</a>
+				<%= link_to 'Home', quotes_path %>
 			</li>
 			<li>
 				<a href="#about">About</a>
@@ -26,11 +26,11 @@
 		</ul>
 	</div>
 
-	<div class="body-container">
-	
+
 	<%= yield %>
 
-	</div>
+
+	
 
 
 </body>
