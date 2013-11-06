@@ -1,0 +1,1370 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 16:47:34 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 101ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateQuotes (20131106004849)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "quotes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131106004849"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 16:49:56 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 16:49:56 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 16:49:57 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1207ms (Views: 1203.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 16:49:58 -0800
+
+
+Started GET "/quotes/new" for 127.0.0.1 at 2013-11-05 16:50:02 -0800
+Processing by QuotesController#new as HTML
+  Rendered quotes/_form.html.erb (212.0ms)
+  Rendered quotes/new.html.erb within layouts/application (268.8ms)
+Completed 200 OK in 277ms (Views: 274.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+Processing by QuotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zua2gpCgiA8v3Sv4UliW9vqw9G8/q566n5iWdDfAbrU=", "quote"=>{"name"=>"Essam Joubori", "content"=>"Welcome, This is quote!"}, "commit"=>"Create Quote"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (58.4ms)[0m  [1mINSERT INTO "quotes" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Welcome, This is quote!"], ["created_at", Wed, 06 Nov 2013 00:51:14 UTC +00:00], ["name", "Essam Joubori"], ["updated_at", Wed, 06 Nov 2013 00:51:14 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/quotes/1
+Completed 302 Found in 67ms (ActiveRecord: 60.2ms)
+
+
+Started GET "/quotes/1" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuote Load (0.4ms)[0m  [1mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered quotes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 16:51:14 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 16:51:16 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 19:55:28 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:37:11 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (43.8ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 138ms (Views: 92.6ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:12 -0800
+
+
+Started GET "/quotes/" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:44 -0800
+
+
+Started GET "/quotes/1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered quotes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:37:45 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:37:46 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:45:19 -0800
+
+
+Started GET "/quotes/new" for 127.0.0.1 at 2013-11-05 23:45:25 -0800
+Processing by QuotesController#new as HTML
+  Rendered quotes/_form.html.erb (4.8ms)
+  Rendered quotes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2013-11-05 23:45:35 -0800
+Processing by QuotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zua2gpCgiA8v3Sv4UliW9vqw9G8/q566n5iWdDfAbrU=", "quote"=>{"name"=>"Tim Bobo", "content"=>"Hi I'm tim"}, "commit"=>"Create Quote"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "quotes" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Hi I'm tim"], ["created_at", Wed, 06 Nov 2013 07:45:35 UTC +00:00], ["name", "Tim Bobo"], ["updated_at", Wed, 06 Nov 2013 07:45:35 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/quotes/2
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/quotes/2" for 127.0.0.1 at 2013-11-05 23:45:35 -0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered quotes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:45:36 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:45:38 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:01 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:51:02 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:52:56 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:10 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:53:32 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.5ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:10 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:11 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:11 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:12 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:54:13 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 23:58:40 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:43 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:44 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:45 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:45 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes/1" for 127.0.0.1 at 2013-11-05 23:58:46 -0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered quotes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:47 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-05 23:58:48 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.2ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:05 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:07 -0800
+
+
+Started GET "/quotes" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 00:04:36 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20131106165058)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "profile_name" varchar(255), "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131106165058"]]
+  [1m[36m (31.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-11-06 09:00:13 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.1ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (155.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-11-06 09:00:14 -0800
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-11-06 09:00:16 -0800
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-06 09:00:20 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/devise-3.0.0.rc/app/views/devise/shared/_links.erb (2.7ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/devise-3.0.0.rc/app/views/devise/registrations/new.html.erb within layouts/application (147.7ms)
+Completed 200 OK in 359ms (Views: 285.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:00:21 -0800
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-06 09:01:52 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zua2gpCgiA8v3Sv4UliW9vqw9G8/q566n5iWdDfAbrU=", "user"=>{"email"=>"essam.joubori@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'essam.joubori@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (39.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 06 Nov 2013 17:01:52 UTC +00:00], ["email", "essam.joubori@gmail.com"], ["encrypted_password", "$2a$10$xdF6OBCsk0JFig4paxZUCeteUbyDPJONAEzx79G7/jOQzwmW8JM0K"], ["updated_at", Wed, 06 Nov 2013 17:01:52 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Wed, 06 Nov 2013 17:01:52 UTC +00:00], ["current_sign_in_at", Wed, 06 Nov 2013 17:01:52 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 06 Nov 2013 17:01:52 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 278ms (ActiveRecord: 44.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:01:52 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 150ms (Views: 107.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:09 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:09 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+
+Started GET "/users" for 127.0.0.1 at 2013-11-06 09:06:10 -0800
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.4ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (53.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 98ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:14 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:35 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:36 -0800
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-11-06 09:06:39 -0800
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes"[0m
+  Rendered quotes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:06:43 -0800
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-11-06 09:06:55 -0800
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-11-06 09:06:55 -0800
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/atlbgw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/atlbgw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.1ms)
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "users"
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 298ms (Views: 137.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/quotes.css?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:44 -0800
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zua2gpCgiA8v3Sv4UliW9vqw9G8/q566n5iWdDfAbrU=", "user"=>{"email"=>"essam.joubori@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'essam.joubori@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 33ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zua2gpCgiA8v3Sv4UliW9vqw9G8/q566n5iWdDfAbrU=", "user"=>{"email"=>"essam.joubori@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Unpermitted parameters: password, remember_me
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:07:56 -0800
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-06 09:07:59 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:08:00 -0800
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zua2gpCgiA8v3Sv4UliW9vqw9G8/q566n5iWdDfAbrU=", "user"=>{"first_name"=>"Essam", "last_name"=>"Joubori", "profile_name"=>"ejoubori", "email"=>"essam.joubori@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name, profile_name
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'essam.joubori@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (47.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 06 Nov 2013 17:08:24 UTC +00:00], ["email", "essam.joubori@gmail.com"], ["encrypted_password", "$2a$10$SbExca5BL7./Qd4732O4RuUZKN6AjiFfzegiFebqGGrbVWy3r4RqS"], ["updated_at", Wed, 06 Nov 2013 17:08:24 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2  [["last_sign_in_at", Wed, 06 Nov 2013 17:08:24 UTC +00:00], ["current_sign_in_at", Wed, 06 Nov 2013 17:08:24 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 06 Nov 2013 17:08:24 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 170ms (ActiveRecord: 53.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+Processing by QuotesController#index as HTML
+  [1m[35mQuote Load (0.3ms)[0m  SELECT "quotes".* FROM "quotes"
+  Rendered quotes/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+
+
+Started GET "/assets/quotes.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 09:08:24 -0800
